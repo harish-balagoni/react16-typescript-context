@@ -25,13 +25,12 @@
   "homepage": "https://github.com/harish-balagoni/react16-typescript-context#readme",
   "devDependencies": {
     "@types/history": "4.7.2",
-    "compression-webpack-plugin": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.31.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1",
-    "uglifyjs-webpack-plugin": "^2.1.2"
+    "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
     "@types/react-dom": "^16.9.5",

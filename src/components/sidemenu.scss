@@ -1,0 +1,147 @@
+.sidebarNavItems {
+    height:  100%;
+    position:  relative;
+    .logo {
+        padding: 20px 6px 14px 14px;
+        display: inline-block;
+        img {
+            width: 120px;
+            transition: all 1s ease-in;
+            position: relative;
+            top: 4px;
+        }
+        .icon-logout {
+            font-size: 30px;
+        }
+        .icon-grid {
+            font-size: 30px;
+            padding-right: 12px;
+            position: relative;
+            top: 0px;
+            left: -4px;
+            cursor: pointer;
+        }
+    }
+    .logOut {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;     
+        font-family: 'Lato-Regular';
+        font-size: 15px;
+        transition: .5s ease-out;
+        color: #191919;
+        cursor: pointer;
+        .icon-logout{
+            font-size: 20px;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+            background-color: #ffffff;
+            border: solid 2px #ffffff;
+            border-radius: 50%;
+            padding: 7px;
+            text-align: center;
+            transition: all 0.5s ease-in;
+            margin-right: 20px;
+            &::before {
+                position: relative;
+                left: -1px;
+            }
+        }
+    }    
+    ul.navItemsMain{
+        padding: 10px 0;
+        max-height: calc(100vh - 160px);
+        overflow: auto;
+        overflow-x: hidden;    
+        li{
+            display: block;
+            a {
+                padding: 16px 14px 14px 10px;
+                display: flex;
+                text-transform: capitalize;
+                font-size: 15px;
+                color: #191919;
+                position: relative;
+                font-family: 'Lato-Regular';
+                span {
+                    margin-right: 26px;
+                    font-size: 24px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            &:hover, &.active{
+                a{
+                    background-image: linear-gradient(to right, rgba(251, 200, 130, 0), rgba(9, 130, 193, 0.1));
+                    font-family: 'Lato-Bold';
+                    cursor: pointer;
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        height: 100%;
+                        width: 6px;
+                        background: #7f57da;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+            ul.sub-menu{
+                padding-left: 50px;
+                li{
+                    list-style: none;
+                    width: 100px;
+                    margin: auto;
+                    a{
+                        background: none;
+                        font-size: 13px;
+                        color: #191919;
+                        text-decoration: none;
+                        padding: 10px 0px 10px 6px;
+                        letter-spacing: normal;
+                        font-family: 'Lato-Light';
+                        &::after{
+                            display: none;
+                        }
+                        &:hover, &.active{
+                            color: #0a83c2;
+                            font-family: 'Lato-Black';
+                        }
+                    }
+                    &.active{ 
+                        a {
+                            color: #0a83c2;
+                            font-family: 'Lato-Black';
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+.left_sidemenu_closed {
+    width: 55px !important;
+    overflow: hidden;
+    img {
+        opacity: 0;
+        transition: all 2s ease-in;
+    }
+    .logOut {
+        left: 8px;
+    }
+    .sub-menu {
+        display: none;
+    }
+}
+.r-open {
+    margin-left: 55px !important;
+    width: calc(100% - 55px) !important;
+    .mainHeader {
+        .headerLeft {
+            width: calc(100% - 55px) !important;
+        }
+    }
+}
